@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+@keyframes down_arrow {
+  0% {
+    bottom: 0px;
+  }
+  10% {
+    bottom: 10px;
+  }
+  20% {
+    bottom: 0;
+  }
+}
+body .header {
+  position: fixed;
+  top: 60%;
+  left: 5%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+body .header .side-navBar ul.list-items {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+body .header .side-navBar ul.list-items li.nav-link a {
+  font-size: 17px;
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 700;
+  position: relative;
+}
+body .header .side-navBar ul.list-items li.nav-link a::after {
+  content: "";
+  height: 1px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform-origin: 100% 100%;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -moz-transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -ms-transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: scaleX(0) translateZ(0);
+  -webkit-transform: scaleX(0) translateZ(0);
+  -moz-transform: scaleX(0) translateZ(0);
+}
+body .header .side-navBar ul.list-items li.nav-link a:hover::after {
+  transform-origin: 0% 0%;
+  transform: scaleX(1) translateZ(0);
+  -webkit-transform: scaleX(1) translateZ(0);
+  -moz-transform: scaleX(1) translateZ(0);
+  -ms-transform: scaleX(1) translateZ(0);
+  -o-transform: scaleX(1) translateZ(0);
+  background-color: #000;
+  color: #000;
+}
+body .heroBanner {
+  font-family: "Nanum Myeongjo", serif;
+  width: 100vw;
+  height: 100vh;
+}
+body .heroBanner .bannerContent {
+  position: relative;
+}
+body .heroBanner .bannerContent .logoWrapper {
+  overflow: hidden;
+  border-radius: 5px;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: none;
+  mix-blend-mode: multiply;
+}
+body .heroBanner .bannerContent .logoWrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .heroBanner .bannerContent .imgWrapper {
+  width: 100%;
+  filter: brightness(80%);
+  background: url("../images/pexels-secret-garden-931162-3.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left bottom;
+  height: 100vh;
+}
+body .heroBanner .bannerContent .textWrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 40%;
+  transform: translateX(-50%);
+}
+body .heroBanner .bannerContent .textWrapper h1 {
+  font-size: 70px;
+}
+body .heroBanner .bannerContent .down-icon {
+  font-size: 36px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: down_arrow 5s ease-in-out;
+  animation-iteration-count: infinite;
+}
+body .blogone {
+  min-height: 100vh;
+  background: #eeeeee;
+  padding: 120px;
+}
+body .blogone .content-box {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+body .blogone .content-box .text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 50%;
+  font-family: "Nanum Myeongjo", serif;
+}
+body .blogone .content-box .text-box h2 {
+  font-size: 42px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+body .blogone .content-box .text-box p {
+  letter-spacing: 1px;
+  width: 75%;
+}
+body .blogone .content-box .text-box .cus-btn button {
+  font-size: 18px;
+  font-weight: 800;
+  border: 2px solid black;
+  background: transparent;
+  padding: 15px 30px;
+  transition: all 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+body .blogone .content-box .text-box .cus-btn button:hover {
+  transition: all 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  background: black;
+  color: #eeeeee;
+}
+body .blogone .content-box .img-box {
+  width: 50%;
+}
+body .blogone .content-box .img-box .img-wrapper {
+  width: 100%;
+  height: 650px;
+}
+body .blogone .content-box .img-box .img-wrapper img {
+  box-shadow: 50px -50px 100px #fafafa;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .blogtwo {
+  background: #eeeeee;
+  padding: 120px 0;
+}
+body .blogtwo .content-box {
+  width: 90%;
+  margin-left: auto;
+}
+body .blogtwo .content-box .text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  font-family: "Nanum Myeongjo", serif;
+}
+body .blogtwo .content-box .text-box h2 {
+  text-align: center;
+  font-size: 60px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+body .blogtwo .content-box .text-box .txt-w-icon {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+body .blogtwo .content-box .text-box .txt-w-icon p {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+body .blogtwo .content-box .text-box .txt-w-icon i {
+  line-height: 0;
+  font-size: 5rem;
+}
+body .blogtwo .content-box .text-box .txt-w-icon i.fa-quote-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}/*# sourceMappingURL=style.css.map */
